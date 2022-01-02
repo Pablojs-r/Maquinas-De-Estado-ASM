@@ -47,51 +47,51 @@ begin
 					    edo_fut <= H;
 					 end if;
 					 
-			   when D => reset <= '0'; inc <= '0' ; activa<= '0'; alarma<= '0';
+		      when D => reset <= '0'; inc <= '0' ; activa<= '0'; alarma<= '0';
 		          if boton = '1' then
 		             edo_fut <= D;
-			       else
-			          edo_fut <= E;
-                end if;
+			   else
+			     edo_fut <= E;
+                          end if;
 					 
-            when E => reset <= '0'; inc <= '0' ; activa<= '0'; alarma<= '0';
+                     when E => reset <= '0'; inc <= '0' ; activa<= '0'; alarma<= '0';
 		          if cont4 = '1' then
 		             edo_fut <= G;
-			       else
-			          edo_fut <= F;
-                end if;
+			  else
+			     edo_fut <= F;
+                          end if;
 					 
-            when F => reset <= '0'; inc <= '1' ; activa<= '0'; alarma<= '0';
+                    when F => reset <= '0'; inc <= '1' ; activa<= '0'; alarma<= '0';
 		          edo_fut <= B;	
         
-            when G => reset <= '0'; inc <= '0' ; activa<= '1'; alarma<= '0';
+                    when G => reset <= '0'; inc <= '0' ; activa<= '1'; alarma<= '0';
 		          edo_fut <= A;
         
-            when H => reset <= '0'; inc <= '0' ; activa<= '0'; alarma<= '0';
+                    when H => reset <= '0'; inc <= '0' ; activa<= '0'; alarma<= '0';
 		          if boton = '1' then
-                   edo_fut <= H;
-                else 
-                   edo_fut <= I;
-                end if;
+                              edo_fut <= H;
+                          else 
+                              edo_fut <= I;
+                         end if;
 					 
-            when I => reset <= '0'; inc <= '0' ; activa<= '0'; alarma<= '0';
+                   when I => reset <= '0'; inc <= '0' ; activa<= '0'; alarma<= '0';
  		          if cont4 = '1' then
-                   edo_fut <= L;
-                else 
-                   edo_fut <= J;
-                end if;
+                             edo_fut <= L;
+                          else 
+                             edo_fut <= J;
+                          end if;
 					 
-		      when J => reset <= '0'; inc <= '1' ; activa<= '0'; alarma<= '0';
+		   when J => reset <= '0'; inc <= '1' ; activa<= '0'; alarma<= '0';
  		          edo_fut <= K;
 			  
-		      when K => reset <= '0'; inc <= '0' ; activa<= '0'; alarma<= '0';
+		   when K => reset <= '0'; inc <= '0' ; activa<= '0'; alarma<= '0';
  		          if boton = '1' then
-                   edo_fut <= H;
-                else 
-                   edo_fut <= K;
-                end if;
+                             edo_fut <= H;
+                          else 
+                             edo_fut <= K;
+                          end if;
 
-		      when L => reset <= '0'; inc <= '1' ; activa<= '0'; alarma<= '1';
+		   when L => reset <= '0'; inc <= '1' ; activa<= '0'; alarma<= '1';
  		          edo_fut <= A;
 		  end case;
 	 end process p_estados1;
